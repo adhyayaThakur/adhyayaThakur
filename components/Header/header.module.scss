@@ -1,0 +1,59 @@
+@import "../../styles/variable.module.scss";
+
+
+.logo{
+  width: 50px;
+  height: 50px;
+}
+
+.header {
+  padding: 10px 20px;
+
+  display: flex;
+  justify-content: space-between;
+
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 13px;
+}
+
+@media only screen and (max-width: 720px)   {
+  .header{
+    background: red;
+  }
+}
+
+.navBar {
+  display: flex;
+
+  ol {
+    list-style: none;
+    counter-reset: li;
+    margin: 20px;
+
+    li::before {
+      content: "0"counter(li)".";
+      color: $light-green-text;
+      width: 1em;
+      margin: 0px 2px;
+    }
+  
+    li {
+      counter-increment: li;
+      display: inline;
+      margin: 0px 5px;
+    }
+
+    li:hover{
+      color: $light-green-text;
+    }
+  }
+  
+}
+
+.resumeButton{
+  border: 1px solid $light-green-text;
+  color: $light-green-text;
+  padding: 5px 30px;
+  background: inherit;
+  border-radius: 10px;
+}

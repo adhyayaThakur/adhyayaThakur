@@ -1,0 +1,60 @@
+@import "../../styles/variable.module.scss";
+
+.container {
+
+
+  position: fixed;
+  width: 40px;
+  bottom: 40px;
+  left: 40px;
+  z-index: 10;
+  height: 200px;
+
+  color: white;
+
+  ul {
+    list-style: none;
+  }
+
+  li {
+    width: 20px;
+    height: 20px;
+    margin: 10px 0px;
+  }
+
+  li:last-child:after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 90px;
+    margin: 0px auto;
+    background-color: $light-grey-text;
+  }
+
+  @media only screen and (max-width: 720px) {
+
+    position: fixed;
+    bottom: 10px;
+
+    width: 100%;
+    left: 0px;
+
+
+    ul{
+      display: flex;
+      width: 100vw;
+      justify-content: space-around;
+      width: 100%;
+      margin: 0px;
+      padding: 0px;
+      left: 0px;
+
+    }
+
+    li:last-child:after {
+
+      display: none;
+
+    }
+  }
+}

@@ -1,3 +1,5 @@
+@import './variable.module.scss';
+
 html,
 body {
   padding: 0;
@@ -21,6 +23,21 @@ a {
   }
   body {
     color: white;
-    background: black;
+    background: $dark-green-blue-background;
+  }
+}
+
+@keyframes glitch2 {
+  0% {
+    transform: none;
+    opacity: 0.25;
+  }
+  50% {
+    transform: translate(-3px, -1px);
+    opacity: 0.5;
+  }
+  100% {
+    transform: none;
+    opacity: 0.25;
   }
 }

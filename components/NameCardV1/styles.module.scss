@@ -1,0 +1,58 @@
+@import "../../styles/variable.module.scss";
+
+
+.container {
+  width: calc(100vw - 300px);
+  margin: 0 auto;
+  height: 300px;
+  margin-top: 100px;
+
+}
+
+.helloText {
+  font-weight: 400;
+  color: $light-green-text;
+  font-family: 'Courier New', Courier, monospace;
+
+}
+
+.nameText {
+  font-weight: 600;
+  color: $light-grey-text;
+  line-height: 1.1;
+  font-size: 90px;
+}
+
+.introText {
+  color: $light-grey-text;
+  font-size: 70px;
+}
+
+.positionText {
+  margin: 20px 0px 0px;
+  max-width: 540px;
+  font-size: 20px;
+  color: $light-grey-text;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+.highlightedText {
+  color: $light-green-text;
+}
+
+.highlightedText:hover {
+  animation-name: underline;
+  animation-timing-function: ease;
+  animation-duration: 1s;
+  
+}
+
+@keyframes underline {
+  0% {
+    text-decoration: none;
+  }
+
+  100% {
+    text-decoration: underline;
+  }
+}

@@ -1,0 +1,51 @@
+@import "../../styles/variable.module.scss";
+
+
+.container {
+
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  width: 40px;
+  color: $light-grey-text;
+
+  .text {
+    writing-mode: vertical-rl;
+
+    font-size: 18px;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 10px;
+  }
+
+  .bar::after{
+    content: "";
+    display: block;
+    width: 1px;
+    height: 90px;
+    margin: 0px auto;
+    background-color: $light-grey-text;
+  }
+
+  @media only screen and (max-width: 720px)   {
+
+    left: auto;
+    right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    text-align: center;
+    top: auto;
+
+
+    .text{
+      writing-mode: horizontal-tb;
+    }
+
+    .bar{
+      display: none;
+    }
+    
+  }
+}
